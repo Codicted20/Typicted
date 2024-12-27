@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="game">
+        <div class="wrapper">
+            <div class="content-box">
+                <li class="time">
+                    <span><b>60</b>s</span>
+                    <p class="start-bord-text"></p>
+                    <input type="text" name="" class="input-field">
+                </li>
+                <div class="typing-text">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="ground">
+            <div class="tree">
+                <ul class="result-details">
+                    <li class="wpm" style="list-style: none;">
+                        <p>WPM:</p>
+                        <span>0</span>
+                    </li>
+                    <li class="coin" style="list-style: none;">
+                        <img src="images/coin.png" alt="" class="coin_image">
+                        <span>0</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="play">
+                <div class="start-bord"></div>
+                <div class="players">
+                    <div class="car">
+                        <div class="wheel wheel1">
+                            <img src="images/car_wheel_left.png" alt="">
+                        </div>
+                        <div class="wheel wheel2">
+                            <img src="images/car_wheel_right.png" alt="">
+                        </div>
+                    </div>
+                    <!-- Other Cars -->
+                    <div class="car otherCar1">
+                        <div class="wheel1 otherCar_Wheel1">
+                            <img src="images/car_wheel_left.png" alt="">
+                        </div>
+                        <div class="wheel2 otherCar_Wheel2">
+                            <img src="images/car_wheel_right.png" alt="">
+                        </div>
+                    </div>
+                    <div class="car otherCar2">
+                        <div class="wheel1 otherCar_Wheel1">
+                            <img src="images/car_wheel_left.png" alt="">
+                        </div>
+                        <div class="wheel2 otherCar_Wheel2">
+                            <img src="images/car_wheel_right.png" alt="">
+                        </div>
+                    </div>
+                    <div class="car otherCar3">
+                        <div class="wheel1 otherCar_Wheel1">
+                            <img src="images/car_wheel_left.png" alt="">
+                        </div>
+                        <div class="wheel2 otherCar_Wheel2">
+                            <img src="images/car_wheel_right.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="instruction">
+        <div class="rules">
+            <div class="instructions"></div>
+            <div style="color:red;">!Type Manually</div>
+            <div style="color:red;">!Do Not Try to use Copy&Paste OR keyboard suggestions word Otherwise your Game will
+                stuck</div>
+            <div> For Moving Car Up & Down You can use arrow keys </div>
+            <div>For Good Experience Use External Keyboard if you are a mobile user</div>
+
+            <button class="next-btn">Play</button>
+
+        </div>
+    </div>
+    <div class="result-box">
+        <div class="result">
+            <ul>
+                <div class="Your-Result">Result</div>
+                <li class="result-wpm">
+                    <p>WPM:</p>
+                    <span>0</span>
+                </li>
+                <li class="result-TimeTaken">
+                    <p>Time:</p>
+                    <span>0</span>
+                </li>
+                <li class="result-Coin">
+                    <p>Coin's:</p>
+                    <span>0</span>
+                </li>
+
+                <li class="result-CorrectWord">
+                    <p>Correctword:</p>
+                    <span>0</span>
+                </li>
+                <li class="result-Correct">
+                    <p>CorrectLetters:</p>
+                    <span>0</span>
+                </li>
+                <button class="Replay-btn">Replay</button>
+            </ul>
+        </div>
+    </div>
+    <script src="paragraph.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

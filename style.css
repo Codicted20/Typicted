@@ -1,0 +1,450 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background-color: black;
+    overflow: hidden;
+}
+
+.wrapper {
+    margin: 10px;
+}
+
+.input-field {
+    opacity: 0;
+}
+
+.content-box {
+    background-color: white;
+    padding: 13px 20px 0;
+    border-radius: 10px;
+}
+
+.typing-text {
+    overflow: hidden;
+    height: 40px;
+    font-size: 21px;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+}
+
+.result-details {
+    background-color: white;
+    display: flex;
+    width: fit-content;
+    height: 40px;
+    position: sticky;
+    left: 10px;
+    border: 2px solid black;
+}
+
+.result-details li {
+    display: flex;
+    align-items: center;
+    height: 22px;
+    margin-top: 5px;
+    padding: 10px;
+}
+
+.result-details li p {
+    font-size: 1.5rem;
+}
+
+.result-details li span {
+    font-size: 1.5rem;
+    display: block;
+    margin-left: 10px;
+}
+
+.result-details li:not(:first-child) {
+    padding-left: 22px;
+    border-left: 1px solid #ccc;
+}
+
+.coin_image {
+    width: 30px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: black;
+    border-radius: 100%;
+}
+
+.tree {
+    background-image: url('images/building.avif');
+    background-repeat: repeat-x;
+    background-size: contain;
+    width: 3000px;
+    height: 20vh;
+    position: relative;
+    left: 0px;
+}
+
+.play {
+    display: flex;
+    background-image: url('images/road.jpg');
+    background-repeat: repeat-x;
+    width: 3000px;
+    height: 100vh;
+    position: relative;
+    left: 0px;
+}
+
+.start-bord {
+    background-image: url('images/start.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 120px;
+    height: 170px;
+    margin-top: 10px;
+}
+
+.start-bord-text {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.car {
+    background-image: url('images/MainCar.png');
+    width: 200px;
+    height: 80px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: -100px;
+    top: 30px;
+    border: 2px solid transparent;
+    animation: shake linear .8s infinite;
+}
+
+.wheel1 img {
+    width: 43px;
+    position: relative;
+    top: 39px;
+    left: 33px;
+}
+
+.wheel2 img {
+    width: 44px;
+    position: relative;
+    top: -8px;
+    left: 134px;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(-3px);
+    }
+
+    50% {
+        transform: translateY(3px);
+
+    }
+
+    100% {
+        transform: translateY(-3px);
+
+    }
+}
+
+.players {
+    display: flex;
+    width: 3000px;
+    position: relative;
+}
+
+.otherCar1 {
+    background-image: url('images/car1.png');
+    height: 60px;
+    top: 10px;
+    left: 1400px;
+}
+
+.otherCar1 .otherCar_Wheel1 img {
+    top: 23px;
+    left: 5px;
+    animation: wheelRotation .1s infinite;
+
+}
+
+.otherCar1 .otherCar_Wheel2 img {
+    top: -25px;
+    left: 94px;
+    animation: wheelRotation .1s infinite;
+
+}
+
+.otherCar2 {
+    height: 70px;
+    background-image: url('images/car2.png');
+    left: 700px;
+    top: 30px;
+}
+
+.otherCar2 .otherCar_Wheel1 img {
+    top: 30px;
+    left: 109px;
+    width: 40px;
+    animation: wheelRotation .1s infinite;
+
+}
+
+.otherCar2 .otherCar_Wheel2 img {
+    top: -20px;
+    left: 6px;
+    animation: wheelRotation .1s infinite;
+
+}
+
+.otherCar3 {
+    height: 70px;
+    background-image: url('images/car3.png');
+    left: 2100px;
+    top: 10px;
+
+}
+
+.otherCar3 .otherCar_Wheel1 img {
+    top: 30px;
+    left: 108px;
+    width: 35px;
+    animation: wheelRotation .1s infinite;
+}
+
+.otherCar3 .otherCar_Wheel2 img {
+    top: -11px;
+    left: 14px;
+    width: 41px;
+    animation: wheelRotation .1s infinite;
+
+}
+
+.time {
+    list-style: none;
+}
+
+.time span b {
+    font-size: 1.7rem;
+}
+
+@keyframes wheelRotation {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.typing-text p span.correct {
+    display: none;
+}
+
+.typing-text p span.incorrect {
+    border: 2px solid red;
+}
+
+.typing-text p span.active {
+    color: #17a2b8;
+    font-size: 2rem;
+    font-weight: 900;
+    border-bottom: 50px solid #17a2b8;
+}
+
+.lesstimeleft {
+    color: red;
+}
+
+.Running {
+    animation: wheelRotation .1s 4;
+}
+
+.coin1 {
+    width: 50px;
+    height: 50px;
+    margin-left: 140px;
+    animation: coinani 1s infinite;
+}
+
+@keyframes coinani {
+    100% {
+        transform: rotate(360deg);
+        background-color: gold;
+        border-radius: 100%;
+    }
+}
+
+.instruction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.instruction .rules {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    height: 80vh;
+    border: 2px solid black;
+    background-color: white;
+    position: absolute;
+    top: 10px;
+    overflow: scroll;
+    z-index: 9999;
+}
+
+.instruction .rules div {
+    border-bottom: 1px solid black;
+    padding: 20px;
+}
+
+.instructions {
+    font-size: 30px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 1px solid black;
+}
+
+.next-btn {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.result-box {
+    display: none;
+}
+
+.result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    width: 100vw;
+    background-image: url('images/bg.jpg');
+    background-size: contain;
+    background-repeat: repeat;
+    overflow: scroll;
+
+}
+
+.result ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 20px solid black;
+    border-radius: 10%;
+    color: black;
+    height: fit-content;
+    width: 400px;
+    background-color: white;
+    box-shadow: 10px 14px 8px 2px gray;
+    position: relative;
+}
+
+.result ul li {
+    display: flex;
+    font-size: 20px;
+    margin: 5px;
+    border-bottom: 1px solid gray;
+}
+
+.result ul li span {
+    position: absolute;
+    right: 10px;
+}
+
+.Replay-btn {
+    background-color: rgb(3, 3, 110);
+    color: white;
+    font-size: 25px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.Your-Result {
+    background-color: rgb(3, 3, 110);
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.Replay-btn:active {
+    background-color: gray;
+}
+
+@media only screen and (max-height: 400px) {
+    .play {
+        height: 40vh;
+        background-size: contain;
+    }
+
+    .start-bord {
+        width: 120px;
+        height: 93%;
+        margin-top: 5px;
+    }
+
+    .car {
+        width: 150px;
+        height: 60px;
+    }
+
+    .wheel1 img {
+        width: 40px;
+        top: 28px;
+        left: 22px;
+    }
+
+    .wheel2 img {
+        width: 43px;
+        top: -19px;
+        left: 93px;
+    }
+
+    .otherCar2 .otherCar_Wheel1 img {
+        top: 22px;
+        left: 7px;
+    }
+
+    .otherCar2 .otherCar_Wheel2 img {
+        top: -22px;
+        left: 88px;
+    }
+
+    .otherCar3 .otherCar_Wheel1 img {
+        top: 22px;
+        left: 7px;
+    }
+
+    .otherCar3 .otherCar_Wheel2 img {
+        top: -16px;
+        left: 88px;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .input-field {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 232px) {
+    .input-field {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-height: 400px) {
+    .result {
+        margin-top: 30px;
+    }
+
+    .result ul li {
+        font-size: 15px;
+        margin: 0px;
+    }
+}
