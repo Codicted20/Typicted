@@ -1,2 +1,2 @@
-# Typicted
+# TypictedCode
 Typicted Game
